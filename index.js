@@ -20,13 +20,13 @@ while (true) {
   if (text === '確認') {
     list_display();
   }
-  if (text === "追加" && !null) {
+  if (text === "追加") {
     list.push(text);
   }
   if (text === "削除") {
     list.splice(2);
   }
-  if (text === "終了" && null) {
+  if (text === "終了") {
     break;
   }
 }
@@ -39,13 +39,13 @@ function added_display(text) {
   if (text === '確認') {
     list_display();
   }
-  if (text === "追加" && !null) {
+  if (text === "追加") {
     list.push(text);
   }
   if (text === "削除") {
     list.splice(2);
   }
-  if (text === "終了" && null) {
+  if (text === "終了") {
     return;
   }
 }
