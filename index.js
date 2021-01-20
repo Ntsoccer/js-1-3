@@ -1,20 +1,20 @@
 const list = ['掃除', '買い物', '散歩'];
 const display_text = `現在持っているタスク一覧\n`;
-function list_display() {
+function listDisplay() {
   console.log(display_text);
-  for (let i = 0; i < list.length; i++) {
-    console.log(`${i}:${list[i]}`);
-  }
+  list.forEach(function (value, index) {
+    console.log(`${index}:${value}`);
+  })
 };
 
 function listAdd(task) {
   list.push(task);
 }
 
-list_display();
+listDisplay();
 
 let i = 2;
-list_display();
+listDisplay();
 while (true) {
   i++;
   const task = prompt('タスクを登録してください');
@@ -23,7 +23,7 @@ while (true) {
   console.log(`${i}:${list[i]}`);
   const text = prompt("「確認,追加,削除,終了」の4つのいずれかを入力してください");
   if (text === '確認') {
-    list_display();
+    listDisplay();
   } else if (text === "追加") {
     list.push(text);
   } else if (text === "削除") {
