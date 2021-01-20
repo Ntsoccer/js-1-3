@@ -6,7 +6,13 @@ function list_display() {
     console.log(`${i}:${list[i]}`);
   }
 };
+
+function list_add(task) {
+  list.push(task);
+}
+
 list_display();
+
 let i = 2;
 list_display();
 while (true) {
@@ -16,23 +22,17 @@ while (true) {
   const added = alert("新しいタスクを追加しました");
   console.log(`${i}:${list[i]}`);
   const text = prompt("「確認,追加,削除,終了」の4つのいずれかを入力してください");
-  // added_display(text);
   if (text === '確認') {
     list_display();
-  }
-  if (text === "追加") {
+  } else if (text === "追加") {
     list.push(text);
-  }
-  if (text === "削除") {
+  } else if (text === "削除") {
     list.splice(2);
-  }
-  if (text === "終了") {
+  } else if (text === "終了") {
     break;
+  } else {
+    alert('エラーです');
   }
-}
-
-function list_add(task) {
-  list.push(task);
 }
 
 // function added_display(text) {
